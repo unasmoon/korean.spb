@@ -1,0 +1,547 @@
+/* Мобильное меню */
+.navbar-mobile {
+    display: none; /* По умолчанию скрыто */
+    justify-content: space-between; /* Пространство между элементами */
+    align-items: center; /* Центрирование по вертикали */
+    padding: 10px;
+    background-color: white;
+}
+
+/* Скрыть меню для ПК на мобильных устройствах */
+@media (max-width: 1000px) {
+    .navbar-desktop {
+        display: none; /* Скрыть меню для ПК */
+    }
+}
+
+
+/* Показать мобильное меню при узком экране */
+@media (max-width: 1000px) {
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu-icon {
+    font-size: 25px; /* Размер значка "гамбургер" */
+    cursor: pointer; /* Указатель мыши */
+}
+
+.mobile-menu {
+    display: none; /* Скрыть меню по умолчанию */
+    position: fixed; /* Для перекрытия экрана */
+    top: 0.1%; /* Расположение ниже navbar */
+    left: 0;
+    width: 100%; /* На всю ширину */
+    background-color: #F6F5FF;
+    border-radius: 0 0 10px 10px; /* Закруглить нижние края */
+    flex-direction: column; /* Вертикальный список */
+    justify-content: center; /* Центрирование по вертикали */
+     /* Добавляем padding для интервала */
+    z-index: 5; /* Занимает более низкий слой, чем основная полоса */
+}
+
+.mobile-menu a {
+    text-decoration: none; /* Убрать подчеркивание */
+    color: black;
+    padding: 15px; /* Пространство между ссылками */
+    text-align: center; /* Центрирование текста */
+    font-family: 'Gilroy Regular';
+}
+
+.mobile-menu .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Расположение крестика в правом верхнем углу */
+    font-size: 30px; /* Размер крестика */
+    cursor: pointer;
+}
+
+
+
+	      /* футер */
+
+@media (max-width: 1000px) {
+
+    .footer {
+        flex-direction: column; /* Ставим вертикальное выравнивание */
+        justify-content: center; /* Центрируем содержимое */
+        align-items: center; /* Выравниваем элементы по центру */
+        padding: 20px; /* Добавляем отступы */
+        height: auto; /* Высота адаптируется к содержимому */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Отступ под логотипом */
+        padding-right: 0; /* Убираем отступ справа */
+    }
+
+    .contact-info {
+        display: flex; /* Flex для выравнивания */
+        flex-direction: column; /* Выравнивание в столбик */
+        align-items: center; /* Центрируем содержимое */
+    }
+
+    .contact-item {
+        display: flex; /* Сохраняем Flex */
+        align-items: center; /* Центрируем иконки по вертикали */
+        margin-bottom: 10px; /* Отступ между строками */
+    }
+
+    .contact-item img {
+        height: 20px; /* Высота иконки */
+        margin-right: 10px; /* Отступ справа от иконки */
+    }
+}
+
+/* ГЛАВНАЯ СТРАНИЦА */
+
+
+/* первый блок */
+@media (max-width: 1350px) {
+    .container {
+        flex-direction: column; /* Изменение направления flex для вертикального расположения */
+        justify-content: flex-start; /* Выровнять по вертикали */
+        align-items: center; /* Центрирование по горизонтали */
+    }
+
+    .content {
+        text-align: center; /* Текст по центру */
+        width: 100%; /* Ширина на всю страницу */
+        margin-right: 0; /* Убираем отступ справа */
+    }
+
+    .main-picture {
+        order: -1; /* Переносим картинку выше */
+ max-width: 100%; /* Ограничиваем ширину изображения */
+ height: auto; /* Позволяем высоте адаптироваться */
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .reasons-container {
+        flex-direction: column; /* Выстраиваем в столбик */
+        margin: 0 auto; /* Центрируем контейнер */
+    }
+
+    .reason {
+        flex: 1; /* Каждый блок занимает всю ширину контейнера */
+        padding: 20px; /* Отступы вокруг блока */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .reasons {
+        max-width: 100%; /* Ограничиваем максимальную ширину */
+        min-width: 200px; /* Задаем минимальную ширину, чтобы изображение не было слишком маленьким */
+        height: auto; /* Сохраняем пропорции изображения */
+        border-radius: 10px; /* Закругляем углы, если нужно */
+    }
+}
+
+/* третий блок   */
+@media (max-width: 1350px) { 
+    .learning {
+        flex-direction: column; /* Вертикальное размещение */
+        text-align: center; /* Центрирование текста */
+        padding: 20px 0; /* Отступы сверху и снизу */
+    }
+
+    .content1, .content2 {
+        text-align: center; /* Центрирование текста */
+        margin: 0; /* Убираем боковые отступы */
+    }
+
+    .learning img {
+        width: 100%; /* Картинка занимает всю ширину */
+        height: auto; /* Сохраняем пропорции */
+        margin-bottom: 10px; /* Отступ снизу после картинки */
+    }
+
+    .content1 {
+        order: 2; /* Для первого и третьего блока */
+    }
+
+    .content2 {
+        order: 1; /* Для второго блока */
+    }
+}
+
+
+/* КУРСЫ  */
+@media (max-width: 1350px) {
+    .centered-container {
+        padding: 20px; /* Добавляем отступы */
+        margin: 0 auto; /* Центрируем */
+        text-align: center; /* Центрируем текст */
+         /* Минимальная высота — высота экрана */
+    }
+
+    .search-box {
+        flex-direction: row; /* Поиск в столбик */
+        align-items: center; /* Центрируем по горизонтали */
+        width: 100%; /* Увеличиваем ширину для мобильных устройств */
+}
+
+    .search-box input {
+        flex: 1; /* Увеличиваем гибкость ввода для заполонения пространства */
+    }
+
+
+    .search-box img {
+        display: block; /* Показываем значок лупы */
+        margin: 10px auto; /* Центрируем */
+    }
+
+    /* Центрируем заголовок */
+    .heading {
+        text-align: center; /* Центрируем заголовок */
+        font-size: 25px; /* Размер шрифта заголовка */
+    }
+
+    /* Стиль для карточек */
+    .card-container {
+        /* flex-direction: column; */ /* Выстраиваем карточки в столбик */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .card {
+        /* width: 90%; */ /* Карточки занимают почти всю ширину */
+        height: auto; /* Высота зависит от содержимого */
+        padding: 20px; /* Отступы внутри карточки */
+        position: relative; /* Для абсолютного позиционирования внутри */
+        /* margin: 10px auto; */ /* Отступы между карточками */
+    }
+
+
+    /* Иконка внутри карточки */
+    .card-icon {
+        width: 80px; /* Размер иконки */
+        height: 80px; /* Высота */
+        margin: 10px auto; /* Отступы и центрирование */
+    }
+
+    /* Заголовок и текст внутри карточки */
+    .card-title {
+        text-align: center; /* Центрируем заголовок внутри карточки */
+        font-weight: bold; /* Жирный шрифт */
+    }
+
+    .card-text {
+        text-align: center; /* Центрируем текст внутри карточки */
+    }
+
+    /* Кнопка внизу карточки */
+    .card-button {
+        position: static; /* Убираем абсолютное позиционирование */
+        margin-top: 10px; /* Отступ сверху */
+        width: 100%; /* Кнопка занимает всю ширину */
+    }
+}
+
+
+
+/*  УРОКИ   */
+@media (max-width: 900px) {
+    .cards-container {
+        justify-content: center; /* Центрирование по вертикали */
+        align-items: center; /* Центрирование по горизонтали */		
+		width: 100%;
+
+    }
+
+    .cards {
+        /* height: 100%; */ /* Автоматическая высота */
+        padding: 20px; /* Отступы внутри карточки */
+    }
+
+}
+
+
+
+
+/*  КОНКРЕТНЫЙ УРОК   */
+@media (max-width: 1350px) {
+    /* Центрируем заголовок */
+    .heading {
+        text-align: center;
+        font-size: 20px; /* Уменьшаем размер шрифта */
+        margin-bottom: 10px;
+    }
+
+    /* Центрируем контейнер видео */
+    video {
+        width: 100%; /* Видео занимает всю ширину */
+        max-width: 400px; /* Максимальная ширина */
+    }
+
+    /* Центрируем текст конспекта */
+    .text {
+        text-align: center;
+        padding: 10px; /* Добавляем внутренние отступы */
+        font-size: 14px;
+    }
+
+    /* Устанавливаем вертикальную структуру для карточек */
+    .cardss-container {
+        flex-direction: column; /* Переводим в столбик */
+        align-items: center; /* Центрируем по горизонтали */
+        gap: 15px; /* Уменьшаем пробел между карточками */
+        padding: 10px; /* Внутренние отступы */
+    }
+
+    /* Стили для каждой карточки */
+    .cardss {
+        width: 90%; /* Занимает почти всю ширину */
+        padding: 20px; /* Увеличиваем внутренние отступы */
+        border-radius: 10px; /* Закругленные углы */
+        text-align: left; /* Выравниваем текст */
+    }
+
+    /* Устанавливаем позицию ссылки "Следующий урок" */
+    .next-lesson {
+        position: relative; /* Позиционирование относительно текущего потока */
+        bottom: auto; /* Отмена фиксированной позиции */
+        text-align: center; /* Центрируем текст */
+        font-size: 18px; /* Увеличиваем размер шрифта */
+    }
+}
+
+/*   МУЛЬТИМЕДИА   */
+
+@media (max-width: 1350px) {
+    #doramas {
+        /* width: 90%; */
+        height: auto;
+        padding: 20px;
+        position: relative;
+        /* margin: 0 auto; */
+    }
+	
+	    #multimedia {
+        /* width: 90%; */
+        height: auto;
+        padding: 20px;
+        position: relative;
+        /* margin: 0; */
+    }
+	
+	/*   О НАС   */
+
+	@media (max-width: 900px) {
+    /* Уменьшаем ширину контейнера для мобильных */
+    .contact-modal {
+        /* width: 90%; */ /* Устанавливаем ширину относительно ширины экрана */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Уменьшаем ширину вводных полей */
+    .contact-input {
+        /* width: 100%; */ /* Занимает всю ширину контейнера */
+        height: 30px; /* Высота */
+    }
+
+    /* Уменьшаем ширину текстовой области */
+    .contact-textarea {
+        /* width: 100%; */ /* Занимает всю ширину контейнера */
+        height: 100px; /* Высота */
+    }
+
+    /* Уменьшаем ширину кнопки */
+    .contact-button {
+        width: 80%; /* Уменьшаем ширину кнопки */
+        margin-top: 10px; /* Добавляем отступ сверху */
+    }
+
+    /* Позиционируем кнопку по центру */
+    .contact-button {
+        display: block; /* Чтобы элемент был блоком */
+        margin: 10px auto; /* Центрируем по горизонтали */
+    }
+}
+
+	@media (max-width: 675px) {
+    /* Уменьшаем ширину контейнера для мобильных */
+    .contact-modal {
+        width: 90%;  /* Устанавливаем ширину относительно ширины экрана */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Уменьшаем ширину вводных полей */
+    .contact-input {
+        /* width: 100%; */ /* Занимает всю ширину контейнера */
+        height: 30px; /* Высота */
+    }
+
+    /* Уменьшаем ширину текстовой области */
+    .contact-textarea {
+       /* width: 100%; *//* Занимает всю ширину контейнера */
+       height: 100px; /* Высота */
+    }
+
+    /* Уменьшаем ширину кнопки */
+    .contact-button {
+        width: 80%; /* Уменьшаем ширину кнопки */
+        margin-top: 10px; /* Добавляем отступ сверху */
+    }
+
+    /* Позиционируем кнопку по центру */
+    .contact-button {
+        display: block; /* Чтобы элемент был блоком */
+        margin: 10px auto; /* Центрируем по горизонтали */
+    }
+}
+
+	/*   СТАТЬИ   */
+
+@media (max-width: 700px) {
+    .article-card {
+        flex-direction: column; /* Перестраиваем элементы в столбик */
+        align-items: center; /* Центрируем по горизонтали */
+        justify-content: center; /* Центрируем по вертикали */
+        padding: 20px; /* Увеличиваем отступы */
+        text-align: center; /* Центрируем текст */
+        /* width: 90%; */ /* Более узкая ширина для мобильных */
+    }
+
+    .article-button {
+        margin-top: 10px; /* Отступ сверху перед кнопкой */
+        display: inline-block; /* Для центрирования кнопки */
+        text-align: center; /* Центрируем внутри кнопки */
+    }
+}
+
+	/*   КОНКРЕТНАЯ СТАТЬЯ   */
+
+@media (max-width: 1380px) {
+    /* Адаптируем изображение */
+    .centered-container img {
+        /* max-width: 100%; */ /* Изображение занимает всю ширину контейнера */
+        height: auto; /* Поддерживаем пропорции */
+    }
+
+    /* Перемещаем ссылку "вернуться к статьям" в конец страницы */
+    .go-back {
+        text-align: center; /* Центрируем текст */
+        font-size: 18px; /* Увеличиваем размер шрифта */
+    }
+
+    .text-back {
+        position: relative; /* Позиционирование относительно текущего потока */
+        bottom: auto; /* Отмена фиксированной позиции */
+        /* text-align: center; */ /* Центрируем текст */
+        font-size: 18px; /* Увеличиваем размер шрифта */
+        }
+}
+
+
+/* ФЛЕШ-КАРТОЧКА */
+@media (max-width: 700px) {
+  .question-card {
+    width: 90%; /* Карточка будет занимать 90% ширины экрана */
+    height: auto; /* Высота изменяется по содержимому */
+  }
+
+
+  .card-bottom {
+     /* Равномерное пространство между элементами */
+     display: flex;
+     align-items: center;
+     flex-wrap: nowrap;
+     flex-direction: column-reverse;
+  }
+  
+}
+
+@media (max-width: 1375px) {
+ .text-back {
+    position: relative; /* Перемещаем ссылку в конец страницы */
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+	/*    ЛИЧНЫЙ КАБИНЕТ   */
+
+
+@media (max-width: 1350px) {
+  .profile-container {
+    flex-direction: row; /* Переналадка на столбик */
+    width: 90%; /* Увеличиваем ширину на мобильных устройствах */
+
+  }
+
+  .profile-photo {
+    /* width: 100%; */ /* Увеличиваем изображение */
+    margin-right: 0; /* Убираем отступ справа */
+  }
+
+  .profile-info {
+    justify-content: center; /* Центрируем имя и значок настройки */
+    /* margin-top: 15%; */
+  }
+
+  .editable {
+    /* width: 140%; */ /* Уменьшаем ширину для мобильных */
+  }
+
+  .favorites-section {
+    width: 90%; /* Ширина для избранного */
+  }
+
+}
+
+@media (max-width: 377px) {
+  .editable {
+    width: 150%; /* Уменьшаем ширину для мобильных */
+  }  
+}
+
+@media (max-width: 700px) {
+  .profile-photo {
+    width: 100%;  /* Увеличиваем изображение */
+    margin-right: 0; /* Убираем отступ справа */
+  }
+  
+    .profile-container {
+    flex-direction: column; /* Переналадка на столбик */
+    width: 90%; /* Увеличиваем ширину на мобильных устройствах */
+  }
+  
+    .profile-info {
+    justify-content: center; /* Центрируем имя и значок настройки */
+    margin-top: 15%; 
+  }
+}
+
+
+@media (max-width: 900px) {
+    .modal-content {
+        width: 80%; /* Уменьшаем ширину модального окна */
+        border-radius: 10px; /* Уменьшаем закругление краев */
+        margin: 20% auto; /* Увеличиваем отступ сверху */
+    }
+
+    .FindPartner {
+        width: 90%; /* Уменьшаем ширину поля ввода */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    textarea {
+        width: 90%; /* Уменьшаем ширину поля ввода */
+        height: 70px; /* Уменьшаем высоту */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    button {
+        font-size: 16px; /* Уменьшаем размер шрифта кнопки */
+        width: 120px; /* Уменьшаем ширину кнопки */
+        height: 40px; /* Уменьшаем высоту кнопки */
+    }
+
+    .close {
+        font-size: 18px; /* Уменьшаем размер шрифта крестика */
+    }
+}
